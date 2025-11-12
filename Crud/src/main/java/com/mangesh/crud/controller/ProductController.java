@@ -31,8 +31,7 @@ public class ProductController
 	
 	@GetMapping(value = "/countProducts")
 	public ResponseEntity<String> countProduct()
-	{
-	    
+	{  
 		Integer iret= this.productServiceImpl.getCount();
 		LogFactory.getLog(getClass()).info(iret+"controller");
 		return new ResponseEntity<String>("hi"+iret,HttpStatus.OK);
